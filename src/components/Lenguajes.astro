@@ -1,0 +1,52 @@
+<div>
+	<h2>Lenguajes de programación</h2>
+	<div class="lenguajes">
+		<ul id="lang-list" class="slider">
+			<!-- <li>    safas</li> -->
+		</ul>
+	</div>
+</div>
+
+<script>
+	const langlist = document.getElementById('lang-list')
+	if (!langlist) {
+		throw new Error('No se encontró el elemento #lang-list')
+	}
+	const lista = [
+		'https://skillicons.dev/icons?i=cpp',
+		'https://skillicons.dev/icons?i=py',
+		'https://skillicons.dev/icons?i=html',
+		'https://skillicons.dev/icons?i=css',
+		'https://skillicons.dev/icons?i=js',
+		'https://skillicons.dev/icons?i=ts',
+		'https://skillicons.dev/icons?i=nestjs',
+		'https://skillicons.dev/icons?i=vue',
+		'https://skillicons.dev/icons?i=php',
+		'https://skillicons.dev/icons?i=mysql',
+	]
+	// for (let i = 0; i < 5; i++) {
+	for (let j = 0; j < 2; j++) {
+		for (let i = 0; i < lista.length; i++) {
+			const li = document.createElement('li')
+			const img = document.createElement('img')
+			img.src = lista[i]
+			img.alt = 'Astro'
+			li.appendChild(img)
+			langlist.appendChild(li)
+		}
+	}
+	// while(true) {
+	// 	for (let i = 0; i < lista.length; i++) {
+	// 		//sperar 10 segundo
+	// 		await new Promise((resolve) => setTimeout(resolve, 1000))
+	// 		const li = document.createElement('li')
+	// 		const img = document.createElement('img')
+	// 		img.src = lista[i]
+	// 		img.alt = 'Astro'
+	// 		li.appendChild(img)
+	// 		langlist.appendChild(li)
+	// 	}
+	// }
+</script>
+
+<!--  <img src="https://skillicons.dev/icons?i=cpp,py,html,css,js,ts,nestjs,vue,php,mysql" /> -->

@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #3d3b3b; */
+    background: linear-gradient(90deg, rgb(17, 8, 44) 20%, rgb(22, 47, 158) 100%);
+
+}
+.inicio{
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+.smoke{
+    width: 67%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 2;
+}
+.inicio > img{
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.perfil{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* background-color: #3d3b3b; */
+    padding: 100px;
+    color: #f0f0f0;
+}
+.perfil > div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+}
+.perfil > div > p{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+    margin: 10px;
+    padding-left: 50px;
+}
+.perfil > div > img{
+    width: 300px;
+    border-radius: 50%;
+    border: 50px ridge rgba(240, 240, 240, 0.5);
+    margin-right: px;
+}
+
+.lenguajes{
+    width: 100%;
+    /* cortar el resto del contenido que se pase */
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    /* scroll del contenido que sobra*/
+}
+.slider{
+    display: flex;
+    width: max-content;
+    animation: slidein 20s linear infinite;
+}
+
+.slider li{
+    list-style: none;
+    padding-right: 30px;
+}
+.slider li  img{
+    width: 150px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 10px outset rgba(114, 132, 211, 0.8);
+    /* border: 10px outset rgba(240, 240, 240, 0.5); */
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.proyects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.imageProyect, textProyect{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.imageProyect > img{
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    left: 25%;
+    box-shadow: 10px 10px 10px #000000;
+}
+p{
+    margin: 10%;
+    margin-right: 30%;
+    color: #f0f0f0;
+}
+.redes{
+    
+}

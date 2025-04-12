@@ -1,0 +1,65 @@
+<div id="proyect-div" class="proyects">
+	<div id="imageProyect" class="imageProyect">
+		<!-- imagenes aqui -->
+	</div>
+	<div class="textProyect">
+		<p>
+			Cómo funciona Los messletters son en su mayoría caracteres de
+			diferentes idiomas como Grεεκ (griego) o Гцѕѕідп (ruso - cirílico) o
+			caracteres de diferentes escrituras, como el Alfabeto fonético.
+			Cuando ingresa su texto en nuestro generador, convierte su texto
+			normal en estas fuentes elegantes o estilos sofisticados, como
+			caligrafía, cursiva, negrita, escritura a mano, inglés antiguo, etc.
+			Aunque todo el mundo siempre llama a Messletters una fuente o un
+			tipo de letra (incluso nosotros lo hacemos a menudo 🤭), en realidad
+			no lo son. ¡Y es exactamente por eso que funciona en todas partes!
+			En Instagram, Facebook, X/Twitter, Whatsapp, WeChat, Tiktok, lo que
+			sea. El nombre correcto probablemente se parecería más a estilos de
+			texto o simplemente a texto elegante. Pero sí, ¡a quién le importa!
+			¡Fuentes elegantes! Cuando nuestro generador haya convertido tu
+			texto en un texto elegante y elegante, ¡simplemente cópialo y pégalo
+			donde quieras! Como dijimos, ¡puedes usarlo en cualquier lugar! Como
+			tu nombre o en una publicación en Facebook/Insta/X. ¡O en tu
+			biografía, en Instagram, pies de foto, firmas, etc.!
+		</p>
+	</div>
+</div>
+<script>
+	import p1 from '../assets/proyects/p1.jpg'
+	import p2 from '../assets/proyects/p2.jpg'
+	import p3 from '../assets/proyects/p3.jpg'
+
+	const imgproyect = document.getElementById('imageProyect')
+	if (!imgproyect) {
+		throw new Error('No se encontró el elemento #lang-list')
+	}
+	const proyects = [
+		{
+			img: p1.src,
+			title: 'Proyecto 1',
+			description: 'Descripcion del proyecto 1',
+		},
+		{
+			img: p2.src,
+			title: 'Proyecto 2',
+			description: 'Descripcion del proyecto 2',
+		},
+		{
+			img: p3.src,
+			title: 'Proyecto 3',
+			description: 'Descripcion del proyecto 3',
+		},
+	]
+	console.log(p1)
+	for (let i = 0; i < proyects.length; i++) {
+		const signo = i % 2 === 0 ? '-' : '+'
+		const imagen = document.createElement('img')
+		imagen.src = proyects[i].img
+		imagen.alt = 'Astro'
+        imagen.style.zIndex = `${i}`
+		// imagen.style.transform = `rotate(${signo + i * 5}deg)`
+        if(i !== 0)
+		    imagen.style.transform = `rotate(${signo + 10}deg)`;
+		imgproyect.appendChild(imagen)
+	}
+</script>
